@@ -1,0 +1,30 @@
+<style>
+  .cContent {
+    margin: 0px 200px;
+  }
+</style>
+<%- include("partials/header"); -%>
+<div class="cContent">
+  <h1>Compose</h1>
+  <form class="" action="/compose" method="post">
+    <div class="form-group">
+      <label>Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="postTitle"
+      />
+    </div>
+    <div class="form-group">
+      <label>Post</label>
+      <textarea
+        name="postBody"
+        class="form-control"
+        cols="40"
+        rows="5"
+      ></textarea>
+    </div>
+    <button type="submit" name="button" class="btn btn-primary">Publish</button>
+  </form>
+</div>
+<%- include("partials/footer"); -%>

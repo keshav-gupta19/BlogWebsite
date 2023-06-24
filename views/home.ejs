@@ -1,0 +1,25 @@
+<style>
+  .home {
+    text-align: left;
+    margin-left: 200px;
+  }
+  .hContent {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+</style>
+<%- include("partials/header"); -%>
+<div class="context center">
+  <div class="homeContentBox">
+    <h1 class="home">Home</h1>
+    <p class="hContent"><%=homeContent%></p>
+  </div>
+  <%posts.forEach(function(post){%>
+  <h1 class="home"><%=post.title%></h1>
+  <p class="hContent">
+    <%=post.content.substring(0,100)+"..."%>
+    <a href="/posts/<%=post._id%>" +>Read More</a>
+  </p>
+  <%})%> <%- include("partials/footer"); -%>
+</div>
